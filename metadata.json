@@ -1,0 +1,6 @@
+{
+  "name": "Timer Cerdas Cermat SMAS Tunas Baru Jin Seung Batam",
+  "description": "Aplikasi Timer Countdown Lomba Cerdas Cermat resmi untuk SMAS Tunas Baru Jin Seung Batam dengan tampilan layar penuh proyektor dan audio Web Audio API presisi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

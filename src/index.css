@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark-navy: #050814;
+    --navy-surface: #0a0f26;
+    --blue-electric: #00d2ff;
+    --blue-glow: rgba(0, 210, 255, 0.45);
+    --red-fiery: #ff2a5f;
+    --red-glow: rgba(255, 42, 95, 0.55);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark-navy);
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+  }
+}
+
+/* Digital Monospace font styling for timer display */
+.font-digital {
+  font-family: 'Share Tech Mono', 'Chakra Petch', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle glowing pulse for urgent state */
+@keyframes urgent-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 35px rgba(255, 42, 95, 0.8)) drop-shadow(0 0 70px rgba(255, 42, 95, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 50px rgba(255, 42, 95, 0.95)) drop-shadow(0 0 100px rgba(255, 42, 95, 0.6));
+    transform: scale(1.015);
+  }
+}
+
+.animate-urgent-pulse {
+  animation: urgent-pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Electric blue glow for normal state */
+.glow-blue {
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.7), 0 0 50px rgba(0, 210, 255, 0.35);
+  filter: drop-shadow(0 0 30px rgba(0, 210, 255, 0.5));
+}
+
+/* Fiery red glow for urgent & finished state */
+.glow-red {
+  text-shadow: 0 0 25px rgba(255, 42, 95, 0.85), 0 0 60px rgba(255, 42, 95, 0.45);
+  filter: drop-shadow(0 0 35px rgba(255, 42, 95, 0.6));
+}
+
+/* Subtle background radiant gradients */
+.bg-ambient-gradient {
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(0, 210, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(255, 42, 95, 0.09) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, #080f2e 0%, #040714 100%);
+}
